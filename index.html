@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oak Hu</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. Variables & Reset --- */
+        :root {
+            /* Palette */
+            --bg-color: #022520;
+            --text-primary: #f0e1b2;
+            --accent-color: #409573;
+            
+            /* Glassmorphism */
+            --glass-bg: rgba(0, 26, 32, 0.33);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-blur: 25px;
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+            /* Typography */
+            --font-main: 'Palatino Linotype', 'Palatino', 'Georgia', serif;
+            --font-display: 'Langar', cursive;
+            --font-cjk: "Ma Shan Zheng", cursive;
+
+            /* Dimensions */
+            --container-width: 800px;
+            --sidenote-width: 400px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* --- 2. Base Layout & Background --- */
+        body {
+            font-family: var(--font-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: flex-start; /* Aligns left for sidenote space */
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            overflow-x: hidden;
+            color: var(--text-primary);
+        }
+
+        /* Flipped Background Image */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-color: var(--bg-color);
+            background-image: url('https://0ak.hu/watercolor.jpg');
+            background-size: cover;
+            background-position: 50% 50%;
+            transform: scaleX(-1);
+            z-index: -1;
+        }
+
+        a {
+            color: inherit;
+            font-family: var(--font-display);
+	    color: var(--accent-color);
+            text-decoration-thickness: 0.1em;
+            text-underline-offset: 0.1em;
+        }
+
+        /* --- 3. The Glass Container --- */
+        .glass-card {
+            max-width: var(--container-width);
+            width: 100%;
+            margin-left: 2.5vw; /* Offset to balance sidenotes */
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            padding: 3rem;
+            position: relative;
+        }
+
+        /* --- 4. Content Styling --- */
+        .content {
+            line-height: 2.0;
+            font-size: 1.43rem;
+        }
+
+        .content h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            text-align: justify;
+        }
+
+        /* CJK Font Utility */
+        .content cjk { font-family: var(--font-cjk); }
+
+        /* Profile Image */
+        .profile-img {
+            float: right;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            width: 30%;
+            height: auto;
+            shape-outside: circle(50%); /* Makes text wrap nicely around circle */
+        }
+
+        /* --- 5. Sidenotes (Tufte Style) --- */
+        /* The Label/Input Hack for CSS-only toggling */
+        input.margin-toggle { display: none; }
+        label.sidenote-number { display: inline-block; cursor: pointer; }
+
+        /* Counter Logic */
+        body { counter-reset: sidenote-counter; }
+        .sidenote-number { counter-increment: sidenote-counter; }
+        
+        .sidenote-number:after {
+            content: counter(sidenote-counter);
+            font-size: 0.75rem;
+            vertical-align: super;
+            margin-left: 0.1rem;
+	    font-weight: bold;
+        }
+
+        /* The Actual Note Box */
+        .sidenote {
+            position: absolute;
+            width: var(--sidenote-width);
+            /* Logic: Center of screen + offset */
+            left: calc(50% + 47.5vw - 200px); 
+            margin-top: 0.3rem;
+            font-size: 1rem;
+            line-height: 1.4;
+            text-align: left;
+            
+            /* Note Visuals */
+            background: rgba(0, 0, 0, 0.67);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--text-primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .sidenote:before {
+            content: counter(sidenote-counter) " ";
+            font-size: 0.75rem;
+	    font-weight: bold;
+            vertical-align: super;
+            margin-right: 0.2rem;
+        }
+
+        /* --- 6. Responsive Design --- */
+        
+        /* Breakpoint: Tablet (< 1275px) - Move sidenotes inline */
+        @media (max-width: 1275px) {
+            body { justify-content: center; }
+            .glass-card { margin-left: 0; }
+            .sidenote-number:after {
+		font-size: 1rem;
+		font-family: var(--font-display);
+                text-decoration: underline;
+	        color: var(--accent-color);
+            }
+            .profile-img {
+                float: none;
+                display: block;
+                margin: 0 auto 2rem auto;
+                width: 50%;
+		max-width: 250px;
+            }    
+            .sidenote { display: none; } /* Hidden by default */
+            
+            /* Show when checkbox checked */
+            .margin-toggle:checked + .sidenote {
+                display: block;
+                position: relative;
+                float: none;
+                left: auto;
+                width: fit-content;
+                margin: 1rem 0;
+            }
+        }
+
+        /* Breakpoint: Mobile (< 480px) */
+        @media (max-width: 480px) {
+            body { padding: 0.5rem; }
+	    .content { font-size: 1rem; line-height: 1.5; }
+            .content h1 { font-size: 2rem; }
+            .glass-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="glass-card">
+        <article class="content">
+            
+            <img class="profile-img" src="https://0ak.hu/WebsitePicture.jpg" alt="Oak Hu">
+            
+            <p>
+                Welcome! My name is
+                Oak.<label for="sn-1" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="sn-1" class="margin-toggle"/>
+                <span class="sidenote">
+                    Well, <a href="https://offhandquibbles.substack.com/p/quotes-and-quinean-quasi-quotes-quickly">technically</a>, my name is ‘Oak Hu’ (a five-letter string), while <em>I'm</em> Oak Hu (the person to whom ‘Oak Hu’ refers); but it’s almost always fine to be sloppy. My parents named me ‘Oak’ after Oklahoma State University, where they went for graduate school. My last name, ‘Hu’, is from the Chinese <cjk>胡</cjk>; appending <cjk>说</cjk> (‘speak’) yields <cjk>胡说</cjk> (‘nonsense’)—naturally, someone named ‘Oak Hu’ does philosophy.
+                </span>
+            </p>
+
+            <p>I do math & philosophy—the two armchair disciplines—at Magdalen College, Oxford.</p>
+
+            <p>My main interests are in the subfields of philosophy where you find λ-terms: the formal semantics of natural language, and the application of higher-order logic to metaphysics.</p>
+        </article>
+    </main>
+</body>
+<script>
+    function preventOverlap() {
+        const notes = document.querySelectorAll('.sidenote');
+        
+        // 1. If screen is small (mobile/tablet), CLEAR all offsets and exit.
+        if (window.innerWidth < 1275) {
+            notes.forEach(note => {
+                note.style.marginTop = ''; // Removes the inline style entirely
+            });
+            return;
+        }
+
+        // 2. If desktop, calculate overlaps
+        let lastBottom = 0;
+
+        notes.forEach((note, index) => {
+            // Reset logic: start clean to get the element's natural 'top'
+            note.style.marginTop = '0px'; 
+            
+            const rect = note.getBoundingClientRect();
+            const top = rect.top + window.scrollY; 
+            
+            // Check against the bottom of the previous note (+ 10px buffer)
+            if (top < lastBottom + 10) {
+                const overlap = (lastBottom + 10) - top;
+                note.style.marginTop = `${overlap}px`;
+                
+                // New bottom is the pushed position + height
+                lastBottom = top + overlap + rect.height;
+            } else {
+                // No overlap, just record this note's natural bottom
+                lastBottom = top + rect.height;
+            }
+        });
+    }
+
+    // Run on load and whenever the window is resized
+    window.addEventListener('load', preventOverlap);
+    window.addEventListener('resize', preventOverlap);
+</script>
+</html>
