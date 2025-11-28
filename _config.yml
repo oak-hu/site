@@ -1,0 +1,40 @@
+# --- Site Settings ---
+title: Oak Hu
+email: oakhu2005@gmail.com
+description: >-
+  Welcome! My name is Oak. I do math and philosophy at Magdalen College, Oxford.
+
+# --- URL Settings ---
+url: "https://0ak.hu"
+baseurl: ""
+
+# --- Build Settings ---
+markdown: kramdown
+permalink: /:categories/:title/
+
+# --- Plugins ---
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# --- Navigation Data ---
+navigation:
+  - title: 0ak.hu
+    url: /
+  - title: About
+    url: /about/
+  - title: Writing
+    url: /writing/
+  - title: CV
+    url: /cv/
+#  - title: Gallery
+#    url: /gallery/
+
+# --- Exclude from Build ---
+# Files you don't want copied to the final site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
