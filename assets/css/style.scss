@@ -186,6 +186,9 @@ cjk { font-family: var(--font-cjk); }
 .cv-org { font-style: italic; opacity: 0.9; }
 
 /* Sidenotes */
+
+body { counter-reset: sidenote-counter; }
+
 input.margin-toggle { display: none; }
 label.sidenote-number { display: inline-block; cursor: pointer; }
 
