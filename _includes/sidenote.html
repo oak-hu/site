@@ -1,5 +1,4 @@
-{% capture note_id %}sn-{% increment sidenote_counter %}{% endcapture %}
-<label for="{{ note_id }}" class="margin-toggle sidenote-number"></label>
+{% capture note_id %}sn-{% increment sidenote_counter %}{% endcapture %}<label for="{{ note_id }}" class="margin-toggle sidenote-number"></label>
 <input type="checkbox" id="{{ note_id }}" class="margin-toggle"/>
 <span class="sidenote">
   {{ include.content | markdownify | remove: '<p>' | remove: '</p>' | strip }}
