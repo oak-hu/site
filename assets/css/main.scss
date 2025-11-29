@@ -169,10 +169,35 @@ cjk { font-family: var(--font-cjk); }
 .writing-item {
     margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;
 }
-.writing-date {
-    font-size: 0.85rem; color: var(--text-secondary); opacity: 0.8;
-    display: block; margin-bottom: 0.2rem; font-family: var(--font-display);
+.writing-meta {
+    display: block;
+    margin-bottom: 0.2rem;
 }
+.writing-date {
+    font-size: 0.85rem; 
+    color: var(--text-secondary); 
+    opacity: 0.8;
+    display: inline-block; 
+    margin-right: 0.8rem; 
+    font-family: var(--font-display);
+}
+.writing-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    color: var(--link-color);
+    border: 1px solid var(--glass-border);
+    padding: 1px 6px;
+    border-radius: 4px;
+    opacity: 0.9;
+    vertical-align: 1px;
+    transition: opacity 0.2s;
+}
+/*.writing-tag:hover {
+    opacity: 1;
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+}*/
 .writing-title { font-size: 1.4rem; color: var(--link-color); }
 
 /* CV Styling */
