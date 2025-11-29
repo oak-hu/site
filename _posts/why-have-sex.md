@@ -6,9 +6,7 @@ date: 2025-11-27
 
 # Why Have Sex?
 
-<a href="/writing/" class="no-icon" style="font-size: 0.9rem; opacity: 0.7;">← Back to Writing</a>
-
-Here, I replicate Maire et al.'s 2001 paper showing that anisogamy can evolve via small mutations even in the absence of mating types.
+_Here, I replicate Maire et al.'s 2001 paper showing that anisogamy can evolve via small mutations even in the absence of mating types._
 
 ## Introduction
 
