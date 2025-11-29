@@ -5,8 +5,8 @@ description: >-
   Welcome! My name is Oak. I do math and philosophy at Magdalen College, Oxford.
 
 # --- URL Settings ---
-url: "https://0ak.hu"
-baseurl: ""
+url: "https://0ak.hu/site"
+baseurl: "https://0ak.hu"
 
 # --- Build Settings ---
 markdown: kramdown
