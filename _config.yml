@@ -23,11 +23,11 @@ navigation:
   - title: 0ak.hu
     url: /
   - title: About
-    url: /about/
+    url: /about
   - title: Writing
     url: /writing/
   - title: CV
-    url: /cv/
+    url: /cv
 #  - title: Gallery
 #    url: /gallery/
 
