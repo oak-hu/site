@@ -31,13 +31,6 @@ navigation:
 #  - title: Gallery
 #    url: /gallery/
 
-# --- Collections ---
-collections:
-  writing:
-    output: true
-    sort_by: date
-    permalink: /writing/:slug/
-
 # --- Exclude from Build ---
 # Files you don't want copied to the final site
 exclude:
