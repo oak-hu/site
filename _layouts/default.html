@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <title>{{ page.title }} | Oak Hu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% seo %}
+    
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="site-nav">
-        <a href="/" class="nav-item">0ak.hu</a>
-        <a href="/about/" class="nav-item">About</a>
-        <a href="/cv/" class="nav-item">CV</a>
-        <a href="/writing/" class="nav-item">Writing</a>
-        <!--<a href="/gallery/" class="nav-item">Gallery</a>-->
+        {% for item in site.navigation %}
+            <a href="{{ item.url | relative_url }}" 
+               class="nav-item {% if page.url == item.url %}active{% endif %}">
+               {{ item.title }}
+            </a>
+        {% endfor %}
     </header>
 
     <main class="glass-card">
         {{ content }}
     </main>
 
-    <script src="/assets/js/scripts.js"></script>
+    <script src="{{ "/assets/js/scripts.js" | relative_url }}"></script>
 </body>
 </html>
