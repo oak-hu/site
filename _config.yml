@@ -6,7 +6,7 @@ description: >-
 
 # --- URL Settings ---
 url: "https://0ak.hu/site"
-baseurl: "https://0ak.hu"
+#baseurl: "https://0ak.hu"
 
 # --- Build Settings ---
 markdown: kramdown
