@@ -32,7 +32,6 @@ navigation:
 #    url: /gallery/
 
 # --- Exclude from Build ---
-# Files you don't want copied to the final site
 exclude:
   - Gemfile
   - Gemfile.lock
