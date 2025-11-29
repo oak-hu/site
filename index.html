@@ -5,8 +5,11 @@ permalink: /
 ---
 
 <img class="profile-img" src="https://0ak.hu/WebsitePicture.jpg" alt="Oak Hu">
+{% capture my_sidenote %}
+Well, [technically](https://offhandquibbles.substack.com/p/quotes-and-quinean-quasi-quotes-quickly), my name is ‘Oak Hu’ (a five-letter string), while _I'm_ Oak Hu (the person to whom ‘Oak Hu’ refers); but it’s almost always fine to be sloppy. My parents named me ‘Oak’ after Oklahoma State University, where they went for graduate school. My last name, ‘Hu’, is from the Chinese {% include cjk.html text="胡" %}; appending {% include cjk.html text="说" %} (‘speak’) yields {% include cjk.html text="胡说" %} (‘nonsense’)—naturally, someone named ‘Oak Hu’ does philosophy.
+{% endcapture %}
 
-Welcome! My name is Oak.{% include sidenote.html content = "Well, [technically](https://offhandquibbles.substack.com/p/quotes-and-quinean-quasi-quotes-quickly), my name is ‘Oak Hu’ (a five-letter string), while _I'm_ Oak Hu (the person to whom ‘Oak Hu’ refers); but it’s almost always fine to be sloppy. My parents named me ‘Oak’ after Oklahoma State University, where they went for graduate school. My last name, ‘Hu’, is from the Chinese {% include cjk.html text="胡" %}; appending {% include cjk.html text="说" %} (‘speak’) yields % include cjk.html text="胡说" %} (‘nonsense’)—naturally, someone named ‘Oak Hu’ does philosophy."%}
+Welcome! My name is Oak.{% include sidenote.html content=my_sidenote %}
 
 I do math & philosophy—the two armchair disciplines—at Magdalen College, Oxford.
 
