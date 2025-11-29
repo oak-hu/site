@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Memories
-permalink: /memories
+title: About
+permalink: /about
 ---
 The prospect of losing memories is really scary: I was distraught when I thought I'd lost my Common App, because it felt like losing a canonical record of my high school years, which took a lot of effort to compile. This page is something like a diary, but filled in (very) belatedly and in principle much more public (although I don't expect anyone other than language models ot possibly my family to read any of it).
 
