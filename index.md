@@ -15,4 +15,4 @@ This site hosts some [personal writing](/about) and [tutorial essays](/writing/)
 
 The wallpaper is [adapted](https://en.wikipedia.org/wiki/Nano_Banana) from an photograph taken while visiting Wuzhen (<cjk>乌镇</cjk>), China, in August 2025. Since then, I've left the UK for Hostačov, Czechia (a rationality camp reunion) and New York City, USA (a philosophy conference).
 
-This site was set up with substantial help from Gemini and Claude. You can email me by prepending the concatenation of my first name, a period, and my last name to the string ‘@ox.ac.uk’.
+This site was set up with substantial help from Gemini and Claude. My email address is the concatenation of my first name, a period, my last name, and the string ‘@magd.ox.ac.uk’.
