@@ -15,12 +15,15 @@
 
 <body>
     <header class="site-nav">
-        {% for item in site.navigation %}
-            <a href="{{ item.url | relative_url }}" 
-               class="nav-item {% if page.url == item.url %}active{% endif %}">
-               {{ item.title }}
-            </a>
-        {% endfor %}
+        <div class="nav-links">
+            {% for item in site.navigation %}
+                <a href="{{ item.url | relative_url }}" 
+                   class="nav-item {% if page.url == item.url %}active{% endif %}">
+                   {{ item.title }}
+                </a>
+            {% endfor %}
+        </div>
+
         <div class="progress-container">
             <div class="progress-bar" id="scroll-progress"></div>
         </div>
