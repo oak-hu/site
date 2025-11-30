@@ -121,7 +121,7 @@ a:hover { color: var(--hover-color); }
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
-    gap: 10vw;
+    gap: 4vw;
     overflow-x: auto; /* Scrolling happens here now */
     width: 100%;
     
@@ -266,7 +266,7 @@ label.sidenote-number {
 @media (orientation: portrait) {
     body { padding: 90px 3vw 3vw 3vw; }
     :root { --container-width: 94vw; }
-    .nav-links { justify-content: flex-start; gap: 1.5rem; padding: 1rem; }
+    .nav-links { justify-content: flex-start; gap: 4vw; padding: 1rem; }
     .glass-card { width: 100%; margin-left: 0; padding: 6vw; }
     .profile-img { float: none; display: block; margin: 0 auto 2rem auto; width: 150px; }    
     .sidenote { display: none; } 
