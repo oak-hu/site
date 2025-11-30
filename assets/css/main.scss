@@ -113,10 +113,12 @@ a:hover { color: var(--hover-color); }
     border-bottom: 1px solid rgba(255,255,255,0.1);
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 1rem 2rem;
     gap: 2rem;
     font-family: var(--font-main);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
     overflow-x: auto;
 }
 
@@ -127,8 +129,10 @@ a:hover { color: var(--hover-color); }
 .nav-item:hover, .nav-item.active { color: var(--hover-color); font-weight: bold; }
 
 .progress-container {
-    position: absolute;
-    bottom: 0; left: 0; width: 100%; height: 3px; background: transparent;
+    position: fixed;
+    top: calc(2rem + (1.5 * clamp(0.9rem, 1.5vw, 1.2rem))); 
+    left: 0; width: 100%; height: 3px; background: transparent;
+    z-index: 1001;
 }
 .progress-bar {
     height: 3px; background: var(--link-color); width: 0%;
