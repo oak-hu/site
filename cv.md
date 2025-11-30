@@ -4,7 +4,6 @@ title: CV
 permalink: /cv
 ---
 <h1>Curriculum Vitae (<a href="https://docs.google.com/document/d/1GBLinqSCOze0VsOQuKtfwWAnrs3FPI2a9Lez4ISiUeQ/edit?usp=sharing">PDF</a>)</h1>
-</div>
 
 <div style="font-family: var(--font-main); color: var(--text-primary);">
 
@@ -144,7 +143,7 @@ permalink: /cv
 <div style="margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
                 <h4>Co-Host</h4>
-                <h4><a href="https://orchard.day"><em>Orchard </em></a></h4></h4>
+                <h4><a href="https://orchard.day"><em>Orchard </em></a></h4>
             </div>
                     A space for co-working on both technical and artistic personal projects.
         </div>
