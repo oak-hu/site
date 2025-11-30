@@ -161,7 +161,7 @@ cjk { font-family: var(--font-cjk); }
 .profile-img {
     float: right; margin-left: 3vw; margin-bottom: 1.5vw;
     border-radius: 50%; width: 30%; shape-outside: circle(50%);
-    border: 2px solid var(--glass-border);
+    /* Border removed as requested */
 }
 
 /* Writing List */
@@ -193,35 +193,42 @@ cjk { font-family: var(--font-cjk); }
     vertical-align: 1px;
     transition: opacity 0.2s;
 }
-/*.writing-tag:hover {
-    opacity: 1;
-    border-color: var(--hover-color);
-    color: var(--hover-color);
-}*/
-.writing-title { font-size: 1.4rem; color: var(--link-color); }
 
-/* CV Styling */
-.cv-header { text-align: center; margin-bottom: 2rem; border-bottom: 1px solid var(--text-secondary); padding-bottom: 1rem; }
-.cv-section { margin-bottom: 2rem; }
-.cv-section h3 { font-family: var(--font-display); color: var(--text-secondary); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
-.cv-entry { margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; }
-.cv-year { font-family: var(--font-display); width: 80px; flex-shrink: 0; color: var(--link-color); font-weight: bold; }
-.cv-detail { flex: 1; }
-.cv-title { font-weight: bold; display: block; }
-.cv-org { font-style: italic; opacity: 0.9; }
+.writing-title { font-size: 1.4rem; color: var(--link-color); }
 
 /* Sidenotes */
 
 body { counter-reset: sidenote-counter; }
 
 input.margin-toggle { display: none; }
-label.sidenote-number { display: inline-block; cursor: pointer; }
+label.sidenote-number { 
+    display: inline-block; 
+    cursor: pointer; 
+}
 
+/* Styled to look like a link */
 .sidenote-number::before {
     content: counter(sidenote-counter);
     font-size: 0.75em; vertical-align: super; margin-left: 0.2em;
-    font-weight: bold; color: var(--text-primary);
+    font-weight: bold; 
+    color: var(--link-color); /* Changed to link color */
+    transition: color 0.2s;
 }
+
+/* "Downish" symbol (⇲) */
+.sidenote-number::after {
+    content: "⇲"; 
+    display: inline-block;
+    font-size: 0.8em; 
+    margin-left: 2px;
+    vertical-align: super;
+    color: var(--hover-color);
+}
+
+.sidenote-number:hover::before {
+    color: var(--hover-color);
+}
+
 .sidenote-number { counter-increment: sidenote-counter; }
 
 .sidenote {
@@ -261,13 +268,3 @@ label.sidenote-number { display: inline-block; cursor: pointer; }
         width: 100%; margin: 1.5rem 0; padding: 1rem;
     }
 }
-
-/*Gallery
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
-.gallery-item {
-    position: relative; aspect-ratio: 1; overflow: hidden;
-    border-radius: 8px; border: 1px solid var(--glass-border);
-    background: rgba(0,0,0,0.2); transition: transform 0.2s;
-}
-.gallery-item:hover { transform: scale(1.02); z-index: 2; border-color: var(--hover-color); }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; }*/
