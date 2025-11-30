@@ -41,7 +41,6 @@ body {
     position: relative;
     overflow-x: hidden;
     color: var(--text-primary);
-    /* Counter for sidenotes */
     counter-reset: sidenote-counter;
 }
 
@@ -109,7 +108,7 @@ a:hover { color: var(--hover-color); }
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     display: flex;
@@ -161,7 +160,6 @@ cjk { font-family: var(--font-cjk); }
 .profile-img {
     float: right; margin-left: 3vw; margin-bottom: 1.5vw;
     border-radius: 50%; width: 30%; shape-outside: circle(50%);
-    /* Border removed as requested */
 }
 
 /* Writing List */
@@ -211,7 +209,7 @@ label.sidenote-number {
     content: counter(sidenote-counter);
     font-size: 0.75em; vertical-align: super; margin-left: 0.2em;
     font-weight: bold; 
-    color: var(--link-color); /* Changed to link color */
+    color: var(--link-color);
     transition: color 0.2s;
 }
 
