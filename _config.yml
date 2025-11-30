@@ -6,7 +6,7 @@ description: >-
 
 # --- URL Settings ---
 url: "https://0ak.hu"
-baseurl: "/site"
+baseurl: ""
 
 # --- Build Settings ---
 markdown: kramdown
@@ -21,7 +21,7 @@ plugins:
 # --- Navigation Data ---
 navigation:
   - title: 0ak.hu
-    url: /
+    url: "https://0ak.hu"
   - title: About
     url: /about
   - title: Writing
