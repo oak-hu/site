@@ -3,7 +3,7 @@ layout: default
 title: CV
 permalink: /cv
 ---
-<h1>Curriculum Vitae (<a href="https://docs.google.com/document/d/1GBLinqSCOze0VsOQuKtfwWAnrs3FPI2a9Lez4ISiUeQ/edit?usp=sharing">PDF</a>)</h1>
+<h1>Curriculum Vitae <span style="font-size: 0.5em; vertical-align: middle;"><a href="https://docs.google.com/document/d/1GBLinqSCOze0VsOQuKtfwWAnrs3FPI2a9Lez4ISiUeQ/edit?usp=sharing">PDF</a></span></h1>
 
 <div style="font-family: var(--font-main); color: var(--text-primary);">
 
