@@ -28,7 +28,7 @@ permalink: /cv
                 <li style="margin-bottom: 0.5vw;">
                     <strong>Magdalen demyship</strong> for distinction on preliminary exams in math and philosophy<label for="sn-2" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="sn-2" class="margin-toggle"/>
-        <span class="sidenote">With scores of 75+ in real analysis, general philosophy + Frege, and philosophical topics in logic and probability</a>
+        <span class="sidenote">With scores of 75+ in real analysis, general philosophy & Frege, and philosophical topics in logic and probability
 </span>
                 </li>
                 <li style="margin-bottom: 0.5vw;">
