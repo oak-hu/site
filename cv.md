@@ -3,14 +3,17 @@ layout: default
 title: CV
 permalink: /cv
 ---
-<h1>Curriculum Vitae <span style="font-size: 0.5em; vertical-align: middle;"><a href="https://docs.google.com/document/d/1GBLinqSCOze0VsOQuKtfwWAnrs3FPI2a9Lez4ISiUeQ/edit?usp=sharing">PDF</a></span></h1>
+<h1>Curriculum Vitae</h1>
+<div style="text-align: center; margin-top: -1.5rem; margin-bottom: 2.5rem; font-family: var(--font-display);">
+    <a href="https://docs.google.com/document/d/1GBLinqSCOze0VsOQuKtfwWAnrs3FPI2a9Lez4ISiUeQ/edit?usp=sharing">View PDF</a>
+</div>
 
 <div style="font-family: var(--font-main); color: var(--text-primary);">
 
 <div style="margin-bottom: 2.5rem;">
-        <h2 style="border-bottom: 1px solid; color: var(--link-color);">Education</h2>
+        <h2 style="border-bottom: 1px solid; color: var(--text-secondary);">Education</h2>
         <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>BA in Mathematics and Philosophy (ongoing)</h4>
                 <h4><em>University of Oxford</em></h4>
             </div>
@@ -43,7 +46,7 @@ permalink: /cv
             </ul>
         </div>
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>High School and IB Diploma</h4>
                 <h4><em>Downingtown STEM Academy</em></h4>
             </div>
@@ -65,11 +68,11 @@ permalink: /cv
     </div>
 
 <div style="margin-bottom: 2.5rem;">
-        <h2 style="border-bottom: 1px solid; color: var(--link-color);">Papers</h2>
+        <h2 style="border-bottom: 1px solid; color: var(--text-secondary);">Papers</h2>
         <div style="margin-bottom: 1.5rem;">
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>Under Review</h4>
             </div>
             <ul style="margin-top: 0.5vw; padding-left: 1vw; list-style-type: disc;">
@@ -83,7 +86,7 @@ permalink: /cv
         </div>
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>In Draft</h4>
             </div>
             <ul style="margin-top: 0.5vw; padding-left: 1vw; list-style-type: disc;">
@@ -103,7 +106,7 @@ permalink: /cv
         </div>
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>In Preparation</h4>
             </div>
             <ul style="margin-top: 0.5vw; padding-left: 1vw; list-style-type: disc;">
@@ -113,10 +116,10 @@ permalink: /cv
             </ul>
         </div>
 <div style="margin-bottom: 2.5rem;">
-        <h2 style="border-bottom: 1px solid; color: var(--link-color);">Activities</h2>
+        <h2 style="border-bottom: 1px solid; color: var(--text-secondary);">Activities</h2>
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>Co-President</h4>
                 <h4><em>Oxford Philosophy Society</em></h4>
             </div>
@@ -124,7 +127,7 @@ permalink: /cv
         </div>
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>Research Associate</h4>
                 <h4><em>Future Impact Group</em></h4>
             </div>
@@ -133,7 +136,7 @@ permalink: /cv
 </div>
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>Public Philosophy</h4>
                 <h4><a href="https://open.substack.com/pub/offhandquibbles"><em>Substack </em></a></h4>
             </div>
@@ -141,7 +144,7 @@ permalink: /cv
         </div>
 
 <div style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--text-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; color: var(--link-color);">
                 <h4>Co-Host</h4>
                 <h4><a href="https://orchard.day"><em>Orchard </em></a></h4>
             </div>
