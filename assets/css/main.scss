@@ -248,10 +248,6 @@ label.sidenote-number {
     .sidenote { display: none; } 
     .sidenote-number::before { font: var(--font-display); color: var(--link-color); cursor: pointer; }
     .sidenote-number::after { content: "⇲"; color: var(--hover-color); display: inline-block; font-size: 0.8em; margin-left: 2px; vertical-align: super; }
-    .margin-toggle:checked + .sidenote {
-        display: block; position: relative; float: none; left: auto;
-        width: 100%; margin: 1.5rem 0; padding: 1rem;
-        animation: noteFadeIn 0.25s ease forwards; opacity: 0;
-    }
+    .margin-toggle:checked + .sidenote { display: block; position: relative; float: none; left: auto; width: 100%; margin: 1.5rem 0; padding: 1rem; animation: noteFadeIn 0.25s ease forwards; opacity: 0; }
 }
 }
