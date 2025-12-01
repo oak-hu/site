@@ -26,8 +26,13 @@
     <header class="site-nav">
         <div class="nav-links">
             {% for item in site.navigation %}
+                {% assign p_url = page.url | absolute_url %}
+                {% assign i_url = item.url | absolute_url %}
+                {% assign p_url_slashed = p_url | append: '/' %}
+                {% assign i_url_slashed = i_url | append: '/' %}
+                
                 <a href="{{ item.url | relative_url }}" 
-                   class="nav-item {% if page.url == item.url %}active{% endif %}">
+                   class="nav-item {% if p_url == i_url or p_url == i_url_slashed or p_url_slashed == i_url %}active{% endif %}">
                    {{ item.title }}
                 </a>
             {% endfor %}
